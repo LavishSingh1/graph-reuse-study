@@ -1,0 +1,61 @@
+Done loading data from cached files.
+
+Split and class checks
+train: n=6,047, positive=572, negative=5,475, invalid=0
+validation: n=863, positive=65, negative=798, invalid=0
+test: n=1,729, positive=184, negative=1,545, invalid=0
+
+Canonical Amazon relations
+('user', 'net_upu', 'user'): 351,216 stored directed edges
+('user', 'net_usu', 'user'): 7,132,958 stored directed edges
+('user', 'net_uvu', 'user'): 2,073,474 stored directed edges
+
+Configuration
+{
+  "seed": 2026,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30
+}
+Nodes: 11,944
+Features: (11944, 25)
+Label values: (tensor([0, 1]), tensor([11123,   821]))
+
+Relation scan: net_upu; stored edges=351,216
+Epoch 001 | loss=24.00065 | validation PR-AUC=0.07841
+Epoch 025 | loss=2.13859 | validation PR-AUC=0.20861
+Epoch 050 | loss=1.23298 | validation PR-AUC=0.25706
+Epoch 075 | loss=1.14150 | validation PR-AUC=0.29025
+Epoch 100 | loss=1.12632 | validation PR-AUC=0.31673
+Epoch 125 | loss=1.07652 | validation PR-AUC=0.35652
+Epoch 150 | loss=1.05891 | validation PR-AUC=0.36741
+Epoch 175 | loss=1.02153 | validation PR-AUC=0.40279
+Epoch 200 | loss=0.97676 | validation PR-AUC=0.46813
+Epoch 225 | loss=0.95643 | validation PR-AUC=0.66114
+Epoch 250 | loss=0.87233 | validation PR-AUC=0.65050
+Epoch 275 | loss=0.80479 | validation PR-AUC=0.72752
+Epoch 300 | loss=0.73345 | validation PR-AUC=0.73097
+
+Relation scan: net_usu; stored edges=7,132,958
+Epoch 001 | loss=25.58626 | validation PR-AUC=0.11003
+Epoch 025 | loss=2.10170 | validation PR-AUC=0.20440
+
+Relation scan: net_uvu; stored edges=2,073,474
+Epoch 001 | loss=35.03393 | validation PR-AUC=0.15805
+Epoch 025 | loss=2.27523 | validation PR-AUC=0.20608
+
+Relation scan: net_upu__net_usu__net_uvu; stored edges=9,557,648
+Epoch 001 | loss=28.14381 | validation PR-AUC=0.09070
+Epoch 025 | loss=2.05301 | validation PR-AUC=0.19464
+
+Results
+               graph_name                 pipeline  roc_auc   pr_auc       f1  training_seconds  peak_gpu_memory_mb
+                  net_upu end_to_end_graphsage_mlp 0.903059 0.750922 0.795181          0.947164           66.267578
+                  net_usu end_to_end_graphsage_mlp 0.795927 0.368110 0.403252          0.320047          633.695801
+                  net_uvu end_to_end_graphsage_mlp 0.782317 0.387891 0.488584          0.148349          208.512207
+net_upu__net_usu__net_uvu end_to_end_graphsage_mlp 0.806033 0.435556 0.522843          0.387144          844.869141
+Saved: results/amazon/relation_scan/amazon_relation_scan_seed_2026.csv

@@ -1,0 +1,51 @@
+Done loading data from cached files.
+
+Split and class checks
+train: n=6,047, positive=572, negative=5,475, invalid=0
+validation: n=863, positive=65, negative=798, invalid=0
+test: n=1,729, positive=184, negative=1,545, invalid=0
+
+Canonical Amazon relations
+('user', 'net_upu', 'user'): 351,216 stored directed edges
+('user', 'net_usu', 'user'): 7,132,958 stored directed edges
+('user', 'net_uvu', 'user'): 2,073,474 stored directed edges
+
+Configuration
+{
+  "seed": 123,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30
+}
+Nodes: 11,944
+Features: (11944, 25)
+Label values: (tensor([0, 1]), tensor([11123,   821]))
+
+Relation scan: net_upu; stored edges=351,216
+Epoch 001 | loss=32.30219 | validation PR-AUC=0.26558
+Epoch 025 | loss=3.24046 | validation PR-AUC=0.21216
+
+Relation scan: net_usu; stored edges=7,132,958
+Epoch 001 | loss=28.14896 | validation PR-AUC=0.15325
+Epoch 025 | loss=2.86677 | validation PR-AUC=0.33779
+Epoch 050 | loss=1.42677 | validation PR-AUC=0.28050
+
+Relation scan: net_uvu; stored edges=2,073,474
+Epoch 001 | loss=42.83264 | validation PR-AUC=0.12118
+Epoch 025 | loss=3.57371 | validation PR-AUC=0.22720
+
+Relation scan: net_upu__net_usu__net_uvu; stored edges=9,557,648
+Epoch 001 | loss=34.76788 | validation PR-AUC=0.18871
+Epoch 025 | loss=3.00553 | validation PR-AUC=0.25476
+
+Results
+               graph_name                 pipeline  roc_auc   pr_auc       f1  training_seconds  peak_gpu_memory_mb
+                  net_upu end_to_end_graphsage_mlp 0.725354 0.407556 0.388278          0.226967           66.267578
+                  net_usu end_to_end_graphsage_mlp 0.834934 0.483358 0.541872          0.486440          633.695801
+                  net_uvu end_to_end_graphsage_mlp 0.787818 0.377378 0.464986          0.162252          208.512207
+net_upu__net_usu__net_uvu end_to_end_graphsage_mlp 0.825967 0.489725 0.576087          0.380539          844.869141
+Saved: results/amazon/relation_scan/amazon_relation_scan_seed_123.csv

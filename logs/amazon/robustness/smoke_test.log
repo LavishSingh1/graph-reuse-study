@@ -1,0 +1,34 @@
+Done loading data from cached files.
+
+Split and class checks
+train: n=6,047, positive=572, negative=5,475, invalid=0
+validation: n=863, positive=65, negative=798, invalid=0
+test: n=1,729, positive=184, negative=1,545, invalid=0
+
+Canonical Amazon relations
+('user', 'net_upu', 'user'): 351,216 stored directed edges
+('user', 'net_usu', 'user'): 7,132,958 stored directed edges
+('user', 'net_uvu', 'user'): 2,073,474 stored directed edges
+
+========================================================================
+Amazon robustness run: relation=net_upu, seed=42, learning_rate=0.001, patience=5, maximum_epochs=10
+========================================================================
+Epoch 001 | loss=19.84810 | validation PR-AUC=0.15556
+
+========================================================================
+Amazon robustness run: relation=net_upu, seed=42, learning_rate=0.0005, patience=5, maximum_epochs=10
+========================================================================
+Epoch 001 | loss=19.84810 | validation PR-AUC=0.14622
+
+========================================================================
+Amazon robustness run: relation=net_upu, seed=42, learning_rate=0.0001, patience=5, maximum_epochs=10
+========================================================================
+Epoch 001 | loss=19.84810 | validation PR-AUC=0.11780
+
+Completed configurations
+ learning_rate  roc_auc   pr_auc       f1  training_seconds  best_epoch  peak_gpu_memory_mb
+        0.0010 0.648730 0.192034 0.148148          0.150852           2           66.267578
+        0.0005 0.651249 0.194085 0.157205          0.025376           4           66.267578
+        0.0001 0.644822 0.159821 0.126582          0.028713          10           66.267578
+
+Saved: results/amazon/robustness/amazon_e2e_robustness_net_upu_seed_42.csv

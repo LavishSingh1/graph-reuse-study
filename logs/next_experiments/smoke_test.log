@@ -1,0 +1,139 @@
+Done loading data from cached files.
+
+Canonical relation types
+('review', 'net_rsr', 'review') stored edges: 6805486
+('review', 'net_rtr', 'review') stored edges: 1147232
+('review', 'net_rur', 'review') stored edges: 98630
+
+Experiment configuration
+{
+  "seed": 42,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 10,
+  "patience": 5
+}
+
+Random controls: raw features + MLP
+Epoch 001 | loss=1.18462 | validation PR-AUC=0.15729
+
+Random controls: random linear projection
+Epoch 001 | loss=1.19526 | validation PR-AUC=0.16935
+
+Random controls: random nonlinear MLP encoder
+Epoch 001 | loss=1.18619 | validation PR-AUC=0.16802
+
+Random controls: random GraphSAGE encoder
+Epoch 001 | loss=1.19524 | validation PR-AUC=0.17218
+
+========================================================================
+Relation_name
+Nodes: 45954
+Edges including self-loops: 6851440
+========================================================================
+
+net_rsr: end-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18869 | validation PR-AUC=0.18073
+
+net_rsr: training reusable supervised encoder
+Epoch 001 | loss=1.37482 | validation PR-AUC=0.14754
+
+net_rsr: frozen supervised embedding + MLP
+Epoch 001 | loss=1.19511 | validation PR-AUC=0.18066
+
+net_rsr: raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18731 | validation PR-AUC=0.15557
+
+net_rsr: random GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19519 | validation PR-AUC=0.17158
+
+========================================================================
+Relation_name
+Nodes: 45954
+Edges including self-loops: 1193186
+========================================================================
+
+net_rtr: end-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18862 | validation PR-AUC=0.17028
+
+net_rtr: training reusable supervised encoder
+Epoch 001 | loss=1.37910 | validation PR-AUC=0.14506
+
+net_rtr: frozen supervised embedding + MLP
+Epoch 001 | loss=1.19529 | validation PR-AUC=0.17319
+
+net_rtr: raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18752 | validation PR-AUC=0.15714
+
+net_rtr: random GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19535 | validation PR-AUC=0.16458
+
+========================================================================
+Relation_name
+Nodes: 45954
+Edges including self-loops: 144584
+========================================================================
+
+net_rur: end-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.19112 | validation PR-AUC=0.20566
+
+net_rur: training reusable supervised encoder
+Epoch 001 | loss=1.42503 | validation PR-AUC=0.13042
+
+net_rur: frozen supervised embedding + MLP
+Epoch 001 | loss=1.19541 | validation PR-AUC=0.18893
+
+net_rur: raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18717 | validation PR-AUC=0.21968
+
+net_rur: random GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19433 | validation PR-AUC=0.19587
+
+========================================================================
+Relation_name
+Nodes: 45954
+Edges including self-loops: 8097302
+========================================================================
+
+all_relations: end-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18867 | validation PR-AUC=0.17769
+
+all_relations: training reusable supervised encoder
+Epoch 001 | loss=1.37471 | validation PR-AUC=0.14652
+
+all_relations: frozen supervised embedding + MLP
+Epoch 001 | loss=1.19511 | validation PR-AUC=0.18265
+
+all_relations: raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18727 | validation PR-AUC=0.15677
+
+all_relations: random GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19524 | validation PR-AUC=0.17218
+
+Final results
+ experiment_group relation_name           representation_name                                      pipeline  roc_auc   pr_auc       f1  training_seconds  first_run_seconds  peak_gpu_memory_mb
+  random_controls      no_graph                  raw_features                              raw_features_mlp 0.708848 0.301301 0.359546          0.127987           0.127987          211.792480
+  random_controls      no_graph      random_linear_projection                  random_linear_projection_mlp 0.694748 0.308056 0.350838          0.029438           0.029611          224.050781
+  random_controls      no_graph          random_nonlinear_mlp                random_nonlinear_mlp_embedding 0.632092 0.231170 0.293189          0.030588           0.031186          236.075195
+  random_controls all_relations              random_graphsage                random_graphsage_embedding_mlp 0.659513 0.235181 0.303897          0.031181           0.049690          368.570312
+relation_ablation       net_rsr    joint_supervised_graphsage              net_rsr_end_to_end_graphsage_mlp 0.683316 0.267795 0.344242          0.113389           0.113389          653.708984
+relation_ablation       net_rsr   frozen_supervised_graphsage       net_rsr_frozen_supervised_graphsage_mlp 0.656599 0.231947 0.306667          0.029708           0.130423          423.256348
+relation_ablation       net_rsr raw_plus_supervised_graphsage                net_rsr_raw_plus_embedding_mlp 0.691229 0.258129 0.332678          0.030368           0.131083          440.523926
+relation_ablation       net_rsr              random_graphsage        net_rsr_random_graphsage_embedding_mlp 0.656906 0.231886 0.301897          0.027971           0.031252          451.110352
+relation_ablation       net_rtr    joint_supervised_graphsage              net_rtr_end_to_end_graphsage_mlp 0.683451 0.265532 0.340308          0.064498           0.064498          199.261230
+relation_ablation       net_rtr   frozen_supervised_graphsage       net_rtr_frozen_supervised_graphsage_mlp 0.658770 0.230245 0.302001          0.028171           0.076358          167.997070
+relation_ablation       net_rtr raw_plus_supervised_graphsage                net_rtr_raw_plus_embedding_mlp 0.690293 0.257447 0.333787          0.029550           0.077737          184.849609
+relation_ablation       net_rtr              random_graphsage        net_rtr_random_graphsage_embedding_mlp 0.659902 0.230034 0.311132          0.030389           0.032030          196.874023
+relation_ablation       net_rur    joint_supervised_graphsage              net_rur_end_to_end_graphsage_mlp 0.732082 0.333921 0.392917          0.060357           0.060357          154.583008
+relation_ablation       net_rur   frozen_supervised_graphsage       net_rur_frozen_supervised_graphsage_mlp 0.689963 0.315982 0.357667          0.029500           0.072329          121.434082
+relation_ablation       net_rur raw_plus_supervised_graphsage                net_rur_raw_plus_embedding_mlp 0.701925 0.327072 0.368539          0.029324           0.072153          138.286621
+relation_ablation       net_rur              random_graphsage        net_rur_random_graphsage_embedding_mlp 0.692692 0.316290 0.356942          0.029205           0.030858          150.311035
+relation_ablation all_relations    joint_supervised_graphsage        all_relations_end_to_end_graphsage_mlp 0.684546 0.268952 0.346041          0.128851           0.128851          760.520020
+relation_ablation all_relations   frozen_supervised_graphsage all_relations_frozen_supervised_graphsage_mlp 0.658650 0.234520 0.300806          0.030560           0.142137          480.618652
+relation_ablation all_relations raw_plus_supervised_graphsage          all_relations_raw_plus_embedding_mlp 0.691672 0.258108 0.331054          0.030750           0.142327          498.774902
+relation_ablation all_relations              random_graphsage  all_relations_random_graphsage_embedding_mlp 0.659470 0.235159 0.303727          0.028277           0.031949          509.253418
+
+Saved: results/next_experiments/random_relation_seed_42.csv

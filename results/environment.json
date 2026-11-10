@@ -1,0 +1,20 @@
+{
+  "python": "3.11.16 (main, Aug 13 2026, 09:46:36) [GCC 11.4.0]",
+  "torch": "2.4.0+cu121",
+  "torch_cuda_runtime": "12.1",
+  "dgl": "2.4.0+cu124",
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A5000",
+  "gpu_count": 1,
+  "cpu_count_logical": 32,
+  "cpu_count_physical": 24,
+  "system_ram_gb": 62.624324798583984,
+  "node_count": 45954,
+  "edge_count_including_self_loops": 8097302,
+  "feature_dimension": 32,
+  "canonical_edge_types": [
+    "('review', 'net_rsr', 'review')",
+    "('review', 'net_rtr', 'review')",
+    "('review', 'net_rur', 'review')"
+  ]
+}

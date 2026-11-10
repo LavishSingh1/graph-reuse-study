@@ -1,0 +1,156 @@
+Done loading data from cached files.
+
+Experiment configuration
+{
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30,
+  "label_fraction": 0.5,
+  "seed": 42,
+  "graph_device": "cuda"
+}
+Selected training labels: 16083
+Graph nodes: 45954
+Graph edges: 8097302
+
+Running raw-feature MLP
+Epoch 001 | loss=1.18411 | val PR-AUC=0.15644
+Epoch 010 | loss=1.17475 | val PR-AUC=0.29302
+Epoch 020 | loss=1.15452 | val PR-AUC=0.30381
+Epoch 030 | loss=1.12500 | val PR-AUC=0.29854
+Epoch 040 | loss=1.09249 | val PR-AUC=0.29782
+Epoch 050 | loss=1.05397 | val PR-AUC=0.30895
+Epoch 060 | loss=1.03532 | val PR-AUC=0.32267
+Epoch 070 | loss=1.01510 | val PR-AUC=0.33729
+Epoch 080 | loss=1.00437 | val PR-AUC=0.35211
+Epoch 090 | loss=0.99727 | val PR-AUC=0.36302
+Epoch 100 | loss=0.98639 | val PR-AUC=0.37993
+Epoch 110 | loss=0.97501 | val PR-AUC=0.39405
+Epoch 120 | loss=0.97186 | val PR-AUC=0.40649
+Epoch 130 | loss=0.95851 | val PR-AUC=0.41582
+Epoch 140 | loss=0.94996 | val PR-AUC=0.42680
+Epoch 150 | loss=0.94550 | val PR-AUC=0.43382
+Epoch 160 | loss=0.93419 | val PR-AUC=0.44202
+Epoch 170 | loss=0.93172 | val PR-AUC=0.44797
+Epoch 180 | loss=0.92280 | val PR-AUC=0.45446
+Epoch 190 | loss=0.91975 | val PR-AUC=0.45875
+Epoch 200 | loss=0.91717 | val PR-AUC=0.46422
+Epoch 210 | loss=0.90570 | val PR-AUC=0.46618
+Epoch 220 | loss=0.90009 | val PR-AUC=0.46937
+Epoch 230 | loss=0.90004 | val PR-AUC=0.47356
+Epoch 240 | loss=0.89479 | val PR-AUC=0.47514
+Epoch 250 | loss=0.88907 | val PR-AUC=0.47577
+Epoch 260 | loss=0.88643 | val PR-AUC=0.47843
+Epoch 270 | loss=0.88647 | val PR-AUC=0.48131
+Epoch 280 | loss=0.87487 | val PR-AUC=0.48206
+Epoch 290 | loss=0.87401 | val PR-AUC=0.48315
+Epoch 300 | loss=0.87223 | val PR-AUC=0.48520
+
+Running end-to-end GraphSAGE
+Epoch 001 | loss=1.37725 | val PR-AUC=0.14640
+Epoch 010 | loss=1.20062 | val PR-AUC=0.16676
+Epoch 020 | loss=1.17384 | val PR-AUC=0.19959
+Epoch 030 | loss=1.15215 | val PR-AUC=0.22888
+Epoch 040 | loss=1.12925 | val PR-AUC=0.24242
+Epoch 050 | loss=1.11714 | val PR-AUC=0.25507
+Epoch 060 | loss=1.10184 | val PR-AUC=0.26731
+Epoch 070 | loss=1.08812 | val PR-AUC=0.27836
+Epoch 080 | loss=1.07357 | val PR-AUC=0.28952
+Epoch 090 | loss=1.06290 | val PR-AUC=0.29845
+Epoch 100 | loss=1.05336 | val PR-AUC=0.30701
+Epoch 110 | loss=1.03894 | val PR-AUC=0.31932
+Epoch 120 | loss=1.02190 | val PR-AUC=0.32539
+Epoch 130 | loss=1.02207 | val PR-AUC=0.33771
+Epoch 140 | loss=1.00845 | val PR-AUC=0.34379
+Epoch 150 | loss=0.99928 | val PR-AUC=0.35559
+Epoch 160 | loss=0.98009 | val PR-AUC=0.36704
+Epoch 170 | loss=0.97183 | val PR-AUC=0.38408
+Epoch 180 | loss=0.96404 | val PR-AUC=0.39488
+Epoch 190 | loss=0.94724 | val PR-AUC=0.40410
+Epoch 200 | loss=0.93791 | val PR-AUC=0.41731
+Epoch 210 | loss=0.93507 | val PR-AUC=0.42782
+Epoch 220 | loss=0.91964 | val PR-AUC=0.43417
+Epoch 230 | loss=0.91486 | val PR-AUC=0.44478
+Epoch 240 | loss=0.90623 | val PR-AUC=0.45036
+Epoch 250 | loss=0.90194 | val PR-AUC=0.46006
+Epoch 260 | loss=0.89522 | val PR-AUC=0.46605
+Epoch 270 | loss=0.89421 | val PR-AUC=0.47264
+Epoch 280 | loss=0.88245 | val PR-AUC=0.48040
+Epoch 290 | loss=0.87519 | val PR-AUC=0.48347
+Epoch 300 | loss=0.87712 | val PR-AUC=0.48810
+
+Running precomputed GraphSAGE plus MLP
+Epoch 001 | loss=1.37725 | val PR-AUC=0.14640
+Epoch 010 | loss=1.20062 | val PR-AUC=0.16676
+Epoch 020 | loss=1.17384 | val PR-AUC=0.19959
+Epoch 030 | loss=1.15215 | val PR-AUC=0.22888
+Epoch 040 | loss=1.12925 | val PR-AUC=0.24242
+Epoch 050 | loss=1.11714 | val PR-AUC=0.25507
+Epoch 060 | loss=1.10184 | val PR-AUC=0.26731
+Epoch 070 | loss=1.08812 | val PR-AUC=0.27836
+Epoch 080 | loss=1.07357 | val PR-AUC=0.28952
+Epoch 090 | loss=1.06290 | val PR-AUC=0.29846
+Epoch 100 | loss=1.05336 | val PR-AUC=0.30701
+Epoch 110 | loss=1.03894 | val PR-AUC=0.31933
+Epoch 120 | loss=1.02188 | val PR-AUC=0.32540
+Epoch 130 | loss=1.02208 | val PR-AUC=0.33772
+Epoch 140 | loss=1.00842 | val PR-AUC=0.34379
+Epoch 150 | loss=0.99927 | val PR-AUC=0.35543
+Epoch 160 | loss=0.98009 | val PR-AUC=0.36690
+Epoch 170 | loss=0.97179 | val PR-AUC=0.38412
+Epoch 180 | loss=0.96400 | val PR-AUC=0.39480
+Epoch 190 | loss=0.94721 | val PR-AUC=0.40406
+Epoch 200 | loss=0.93800 | val PR-AUC=0.41715
+Epoch 210 | loss=0.93516 | val PR-AUC=0.42766
+Epoch 220 | loss=0.91963 | val PR-AUC=0.43406
+Epoch 230 | loss=0.91481 | val PR-AUC=0.44497
+Epoch 240 | loss=0.90645 | val PR-AUC=0.45054
+Epoch 250 | loss=0.90211 | val PR-AUC=0.45994
+Epoch 260 | loss=0.89522 | val PR-AUC=0.46612
+Epoch 270 | loss=0.89430 | val PR-AUC=0.47207
+Epoch 280 | loss=0.88246 | val PR-AUC=0.47995
+Epoch 290 | loss=0.87518 | val PR-AUC=0.48380
+Epoch 300 | loss=0.87714 | val PR-AUC=0.48774
+Epoch 001 | loss=1.17848 | val PR-AUC=0.34617
+Epoch 010 | loss=1.08361 | val PR-AUC=0.48109
+Epoch 020 | loss=0.92995 | val PR-AUC=0.47656
+Epoch 030 | loss=0.86176 | val PR-AUC=0.47591
+Epoch 040 | loss=0.85473 | val PR-AUC=0.48695
+Epoch 050 | loss=0.84255 | val PR-AUC=0.49554
+Epoch 060 | loss=0.83828 | val PR-AUC=0.49681
+Epoch 070 | loss=0.83416 | val PR-AUC=0.49761
+Epoch 080 | loss=0.82849 | val PR-AUC=0.49899
+Epoch 090 | loss=0.82825 | val PR-AUC=0.49938
+Epoch 100 | loss=0.82526 | val PR-AUC=0.49988
+Epoch 110 | loss=0.82413 | val PR-AUC=0.50033
+Epoch 120 | loss=0.81876 | val PR-AUC=0.50085
+Epoch 130 | loss=0.81639 | val PR-AUC=0.50194
+Epoch 140 | loss=0.81464 | val PR-AUC=0.50275
+Epoch 150 | loss=0.81652 | val PR-AUC=0.50375
+Epoch 160 | loss=0.81128 | val PR-AUC=0.50475
+Epoch 170 | loss=0.80871 | val PR-AUC=0.50672
+Epoch 180 | loss=0.80975 | val PR-AUC=0.50774
+Epoch 190 | loss=0.80935 | val PR-AUC=0.50887
+Epoch 200 | loss=0.80549 | val PR-AUC=0.50997
+Epoch 210 | loss=0.80660 | val PR-AUC=0.51154
+Epoch 220 | loss=0.80071 | val PR-AUC=0.51136
+Epoch 230 | loss=0.80480 | val PR-AUC=0.51260
+Epoch 240 | loss=0.80046 | val PR-AUC=0.51407
+Epoch 250 | loss=0.79862 | val PR-AUC=0.51512
+Epoch 260 | loss=0.79995 | val PR-AUC=0.51655
+Epoch 270 | loss=0.79804 | val PR-AUC=0.51700
+Epoch 280 | loss=0.79348 | val PR-AUC=0.51873
+Epoch 290 | loss=0.78856 | val PR-AUC=0.51871
+Epoch 300 | loss=0.79402 | val PR-AUC=0.51896
+
+Final results
+                 pipeline  training_time_seconds  peak_gpu_memory_mb  best_epoch  best_validation_pr_auc  roc_auc   pr_auc       f1  inference_time_seconds  inference_peak_gpu_memory_mb  embedding_training_seconds  embedding_extraction_seconds  embedding_storage_mb  seed  label_fraction  hidden_dimension  embedding_dimension  cpu_process_memory_mb_end  embedding_training_peak_gpu_memory_mb                                     embedding_file
+                  raw_mlp               1.376516          211.792480         298                0.487186 0.821470 0.486740 0.446217                0.000579                    170.487793                    0.000000                      0.000000              0.000000    42             0.5                64                   64                1311.621094                                    NaN                                                NaN
+     end_to_end_graphsage               3.556126          760.455566         298                0.488107 0.831074 0.483269 0.462366                0.003593                    451.708984                    0.000000                      0.000000              0.000000    42             0.5                64                   64                1311.621094                                    NaN                                                NaN
+precomputed_graphsage_mlp               1.284349          469.399414         297                0.519931 0.838709 0.518336 0.472993                0.000589                    430.202637                    3.553409                      0.003882             11.220868    42             0.5                64                   64                1311.621094                             483.362305 embeddings/yelp_graphsage_seed_42_fraction_0.50.pt
+
+Saved results to results/run_seed_42_fraction_0.50.csv

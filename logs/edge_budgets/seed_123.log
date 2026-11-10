@@ -1,0 +1,339 @@
+Done loading data from cached files.
+
+Available YelpChi relations
+net_rsr: 6,805,486 stored directed edges
+net_rtr: 1,147,232 stored directed edges
+net_rur: 98,630 stored directed edges
+
+Experiment configuration
+{
+  "seed": 123,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30
+}
+Nodes: 45,954
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 25,000
+Actual stored edges: 25,000
+Edges after self-loops: 70,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.20026 | validation PR-AUC=0.15596
+Epoch 025 | loss=1.10268 | validation PR-AUC=0.29561
+Epoch 050 | loss=1.03100 | validation PR-AUC=0.33802
+Epoch 075 | loss=0.99430 | validation PR-AUC=0.37386
+Epoch 100 | loss=0.94765 | validation PR-AUC=0.41288
+Epoch 125 | loss=0.91903 | validation PR-AUC=0.44155
+Epoch 150 | loss=0.89065 | validation PR-AUC=0.45739
+Epoch 175 | loss=0.88235 | validation PR-AUC=0.46802
+Epoch 200 | loss=0.87470 | validation PR-AUC=0.47783
+Epoch 225 | loss=0.85829 | validation PR-AUC=0.48328
+Epoch 250 | loss=0.85136 | validation PR-AUC=0.48903
+Epoch 275 | loss=0.83762 | validation PR-AUC=0.49446
+Epoch 300 | loss=0.83074 | validation PR-AUC=0.49751
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 50,000
+Actual stored edges: 50,000
+Edges after self-loops: 95,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19953 | validation PR-AUC=0.15028
+Epoch 025 | loss=1.11326 | validation PR-AUC=0.28206
+Epoch 050 | loss=1.04072 | validation PR-AUC=0.32764
+Epoch 075 | loss=0.99369 | validation PR-AUC=0.37379
+Epoch 100 | loss=0.94910 | validation PR-AUC=0.41785
+Epoch 125 | loss=0.92068 | validation PR-AUC=0.43460
+Epoch 150 | loss=0.89945 | validation PR-AUC=0.44794
+Epoch 175 | loss=0.88977 | validation PR-AUC=0.45679
+Epoch 200 | loss=0.88199 | validation PR-AUC=0.46370
+Epoch 225 | loss=0.86582 | validation PR-AUC=0.46505
+Epoch 250 | loss=0.85688 | validation PR-AUC=0.47040
+Epoch 275 | loss=0.85202 | validation PR-AUC=0.47403
+Epoch 300 | loss=0.83488 | validation PR-AUC=0.47542
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 98,630
+Actual stored edges: 98,630
+Edges after self-loops: 144,584
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19920 | validation PR-AUC=0.15576
+Epoch 025 | loss=1.11707 | validation PR-AUC=0.29631
+Epoch 050 | loss=1.03580 | validation PR-AUC=0.34524
+Epoch 075 | loss=0.98303 | validation PR-AUC=0.38517
+Epoch 100 | loss=0.94451 | validation PR-AUC=0.42964
+Epoch 125 | loss=0.91496 | validation PR-AUC=0.44523
+Epoch 150 | loss=0.88992 | validation PR-AUC=0.45549
+Epoch 175 | loss=0.87760 | validation PR-AUC=0.46377
+Epoch 200 | loss=0.87198 | validation PR-AUC=0.47030
+Epoch 225 | loss=0.85024 | validation PR-AUC=0.47616
+Epoch 250 | loss=0.84247 | validation PR-AUC=0.48082
+Epoch 275 | loss=0.83332 | validation PR-AUC=0.48576
+Epoch 300 | loss=0.82183 | validation PR-AUC=0.48888
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 250,000
+Actual stored edges: 250,000
+Edges after self-loops: 295,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19873 | validation PR-AUC=0.14715
+Epoch 025 | loss=1.11868 | validation PR-AUC=0.30255
+Epoch 050 | loss=1.02832 | validation PR-AUC=0.35074
+Epoch 075 | loss=0.97854 | validation PR-AUC=0.38155
+Epoch 100 | loss=0.94119 | validation PR-AUC=0.42449
+Epoch 125 | loss=0.90501 | validation PR-AUC=0.45254
+Epoch 150 | loss=0.88435 | validation PR-AUC=0.46705
+Epoch 175 | loss=0.87279 | validation PR-AUC=0.47751
+Epoch 200 | loss=0.85974 | validation PR-AUC=0.48752
+Epoch 225 | loss=0.84102 | validation PR-AUC=0.49309
+Epoch 250 | loss=0.83700 | validation PR-AUC=0.50340
+Epoch 275 | loss=0.82980 | validation PR-AUC=0.50742
+Epoch 300 | loss=0.81491 | validation PR-AUC=0.51197
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 500,000
+Actual stored edges: 500,000
+Edges after self-loops: 545,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19825 | validation PR-AUC=0.14975
+Epoch 025 | loss=1.12013 | validation PR-AUC=0.31185
+Epoch 050 | loss=1.02099 | validation PR-AUC=0.35904
+Epoch 075 | loss=0.97340 | validation PR-AUC=0.39795
+Epoch 100 | loss=0.93042 | validation PR-AUC=0.44123
+Epoch 125 | loss=0.89471 | validation PR-AUC=0.46341
+Epoch 150 | loss=0.87130 | validation PR-AUC=0.47472
+Epoch 175 | loss=0.85878 | validation PR-AUC=0.48632
+Epoch 200 | loss=0.85096 | validation PR-AUC=0.49545
+Epoch 225 | loss=0.83464 | validation PR-AUC=0.50057
+Epoch 250 | loss=0.82623 | validation PR-AUC=0.50838
+Epoch 275 | loss=0.81531 | validation PR-AUC=0.51194
+Epoch 300 | loss=0.80364 | validation PR-AUC=0.51586
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 6,805,486
+Actual stored edges: 6,805,486
+Edges after self-loops: 6,851,440
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19788 | validation PR-AUC=0.15084
+Epoch 025 | loss=1.11862 | validation PR-AUC=0.32560
+Epoch 050 | loss=1.01721 | validation PR-AUC=0.37912
+Epoch 075 | loss=0.96887 | validation PR-AUC=0.42335
+Epoch 100 | loss=0.91979 | validation PR-AUC=0.47605
+Epoch 125 | loss=0.87399 | validation PR-AUC=0.51394
+Epoch 150 | loss=0.84740 | validation PR-AUC=0.53938
+Epoch 175 | loss=0.83473 | validation PR-AUC=0.55368
+Epoch 200 | loss=0.83006 | validation PR-AUC=0.56268
+Epoch 225 | loss=0.80999 | validation PR-AUC=0.56648
+Epoch 250 | loss=0.80216 | validation PR-AUC=0.56981
+Epoch 275 | loss=0.79545 | validation PR-AUC=0.57497
+Epoch 300 | loss=0.78640 | validation PR-AUC=0.57790
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 25,000
+Actual stored edges: 25,000
+Edges after self-loops: 70,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.20075 | validation PR-AUC=0.15378
+Epoch 025 | loss=1.10543 | validation PR-AUC=0.27596
+Epoch 050 | loss=1.03736 | validation PR-AUC=0.32249
+Epoch 075 | loss=0.99876 | validation PR-AUC=0.36801
+Epoch 100 | loss=0.95395 | validation PR-AUC=0.41702
+Epoch 125 | loss=0.92851 | validation PR-AUC=0.44361
+Epoch 150 | loss=0.90424 | validation PR-AUC=0.45218
+Epoch 175 | loss=0.89157 | validation PR-AUC=0.46038
+Epoch 200 | loss=0.88469 | validation PR-AUC=0.46825
+Epoch 225 | loss=0.86730 | validation PR-AUC=0.47197
+Epoch 250 | loss=0.85999 | validation PR-AUC=0.47577
+Epoch 275 | loss=0.84778 | validation PR-AUC=0.47774
+Epoch 300 | loss=0.83544 | validation PR-AUC=0.48055
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 50,000
+Actual stored edges: 50,000
+Edges after self-loops: 95,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19994 | validation PR-AUC=0.15619
+Epoch 025 | loss=1.11015 | validation PR-AUC=0.28732
+Epoch 050 | loss=1.03771 | validation PR-AUC=0.33057
+Epoch 075 | loss=0.99392 | validation PR-AUC=0.37886
+Epoch 100 | loss=0.95550 | validation PR-AUC=0.42616
+Epoch 125 | loss=0.92109 | validation PR-AUC=0.45208
+Epoch 150 | loss=0.89851 | validation PR-AUC=0.46211
+Epoch 175 | loss=0.88919 | validation PR-AUC=0.47056
+Epoch 200 | loss=0.87639 | validation PR-AUC=0.47329
+Epoch 225 | loss=0.86157 | validation PR-AUC=0.47518
+Epoch 250 | loss=0.85155 | validation PR-AUC=0.47899
+Epoch 275 | loss=0.84394 | validation PR-AUC=0.48424
+Epoch 300 | loss=0.83115 | validation PR-AUC=0.48875
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 98,630
+Actual stored edges: 98,630
+Edges after self-loops: 144,584
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19985 | validation PR-AUC=0.15084
+Epoch 025 | loss=1.12157 | validation PR-AUC=0.27222
+Epoch 050 | loss=1.03633 | validation PR-AUC=0.32434
+Epoch 075 | loss=0.98943 | validation PR-AUC=0.37841
+Epoch 100 | loss=0.94829 | validation PR-AUC=0.42756
+Epoch 125 | loss=0.91667 | validation PR-AUC=0.44347
+Epoch 150 | loss=0.89576 | validation PR-AUC=0.45168
+Epoch 175 | loss=0.88447 | validation PR-AUC=0.46171
+Epoch 200 | loss=0.87779 | validation PR-AUC=0.46758
+Epoch 225 | loss=0.85907 | validation PR-AUC=0.47369
+Epoch 250 | loss=0.85115 | validation PR-AUC=0.48281
+Epoch 275 | loss=0.84029 | validation PR-AUC=0.48645
+Epoch 300 | loss=0.82972 | validation PR-AUC=0.48958
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 250,000
+Actual stored edges: 250,000
+Edges after self-loops: 295,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19866 | validation PR-AUC=0.14699
+Epoch 025 | loss=1.12331 | validation PR-AUC=0.28326
+Epoch 050 | loss=1.02915 | validation PR-AUC=0.33755
+Epoch 075 | loss=0.98188 | validation PR-AUC=0.38625
+Epoch 100 | loss=0.93908 | validation PR-AUC=0.43642
+Epoch 125 | loss=0.90409 | validation PR-AUC=0.46296
+Epoch 150 | loss=0.87746 | validation PR-AUC=0.47765
+Epoch 175 | loss=0.86769 | validation PR-AUC=0.48910
+Epoch 200 | loss=0.85399 | validation PR-AUC=0.49780
+Epoch 225 | loss=0.84163 | validation PR-AUC=0.50047
+Epoch 250 | loss=0.83083 | validation PR-AUC=0.50576
+Epoch 275 | loss=0.82323 | validation PR-AUC=0.50915
+Epoch 300 | loss=0.81220 | validation PR-AUC=0.51332
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 500,000
+Actual stored edges: 500,000
+Edges after self-loops: 545,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19827 | validation PR-AUC=0.14707
+Epoch 025 | loss=1.12299 | validation PR-AUC=0.29979
+Epoch 050 | loss=1.02751 | validation PR-AUC=0.34887
+Epoch 075 | loss=0.98192 | validation PR-AUC=0.38328
+Epoch 100 | loss=0.94156 | validation PR-AUC=0.42879
+Epoch 125 | loss=0.90067 | validation PR-AUC=0.45430
+Epoch 150 | loss=0.87526 | validation PR-AUC=0.47580
+Epoch 175 | loss=0.86579 | validation PR-AUC=0.48707
+Epoch 200 | loss=0.85238 | validation PR-AUC=0.49901
+Epoch 225 | loss=0.84012 | validation PR-AUC=0.50431
+Epoch 250 | loss=0.82539 | validation PR-AUC=0.50729
+Epoch 275 | loss=0.81915 | validation PR-AUC=0.51518
+Epoch 300 | loss=0.81111 | validation PR-AUC=0.51919
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 1,147,232
+Actual stored edges: 1,147,232
+Edges after self-loops: 1,193,186
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19829 | validation PR-AUC=0.14483
+Epoch 025 | loss=1.12295 | validation PR-AUC=0.31104
+Epoch 050 | loss=1.02353 | validation PR-AUC=0.36219
+Epoch 075 | loss=0.98060 | validation PR-AUC=0.39983
+Epoch 100 | loss=0.93523 | validation PR-AUC=0.44749
+Epoch 125 | loss=0.89197 | validation PR-AUC=0.48184
+Epoch 150 | loss=0.86469 | validation PR-AUC=0.50024
+Epoch 175 | loss=0.85655 | validation PR-AUC=0.51029
+Epoch 200 | loss=0.84153 | validation PR-AUC=0.51920
+Epoch 225 | loss=0.82426 | validation PR-AUC=0.52347
+Epoch 250 | loss=0.81121 | validation PR-AUC=0.53088
+Epoch 275 | loss=0.80432 | validation PR-AUC=0.53771
+Epoch 300 | loss=0.79661 | validation PR-AUC=0.53722
+
+------------------------------------------------------------------------------
+Relation: net_rur
+Requested budget: 25,000
+Actual stored edges: 25,000
+Edges after self-loops: 70,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19927 | validation PR-AUC=0.17110
+Epoch 025 | loss=1.06581 | validation PR-AUC=0.34088
+Epoch 050 | loss=0.98623 | validation PR-AUC=0.40036
+Epoch 075 | loss=0.94313 | validation PR-AUC=0.44098
+Epoch 100 | loss=0.89289 | validation PR-AUC=0.47611
+Epoch 125 | loss=0.86233 | validation PR-AUC=0.49815
+Epoch 150 | loss=0.83229 | validation PR-AUC=0.51339
+Epoch 175 | loss=0.81560 | validation PR-AUC=0.52135
+Epoch 200 | loss=0.80740 | validation PR-AUC=0.52894
+Epoch 225 | loss=0.78495 | validation PR-AUC=0.53318
+Epoch 250 | loss=0.77432 | validation PR-AUC=0.53538
+Epoch 275 | loss=0.76092 | validation PR-AUC=0.53826
+Epoch 300 | loss=0.75183 | validation PR-AUC=0.54367
+
+------------------------------------------------------------------------------
+Relation: net_rur
+Requested budget: 50,000
+Actual stored edges: 50,000
+Edges after self-loops: 95,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19838 | validation PR-AUC=0.17605
+Epoch 025 | loss=1.05389 | validation PR-AUC=0.35346
+Epoch 050 | loss=0.96082 | validation PR-AUC=0.41543
+Epoch 075 | loss=0.91084 | validation PR-AUC=0.46781
+Epoch 100 | loss=0.85506 | validation PR-AUC=0.50468
+Epoch 125 | loss=0.81791 | validation PR-AUC=0.52156
+Epoch 150 | loss=0.78595 | validation PR-AUC=0.53357
+Epoch 175 | loss=0.77055 | validation PR-AUC=0.54021
+Epoch 200 | loss=0.76844 | validation PR-AUC=0.54619
+Epoch 225 | loss=0.74670 | validation PR-AUC=0.54813
+Epoch 250 | loss=0.73675 | validation PR-AUC=0.55484
+Epoch 275 | loss=0.72858 | validation PR-AUC=0.56143
+Epoch 300 | loss=0.71318 | validation PR-AUC=0.56305
+
+------------------------------------------------------------------------------
+Relation: net_rur
+Requested budget: 98,630
+Actual stored edges: 98,630
+Edges after self-loops: 144,584
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19768 | validation PR-AUC=0.17986
+Epoch 025 | loss=1.03644 | validation PR-AUC=0.38788
+Epoch 050 | loss=0.92451 | validation PR-AUC=0.45624
+Epoch 075 | loss=0.86425 | validation PR-AUC=0.51348
+Epoch 100 | loss=0.80947 | validation PR-AUC=0.54615
+Epoch 125 | loss=0.77213 | validation PR-AUC=0.56583
+Epoch 150 | loss=0.74098 | validation PR-AUC=0.57451
+Epoch 175 | loss=0.72600 | validation PR-AUC=0.57965
+Epoch 200 | loss=0.71940 | validation PR-AUC=0.58777
+Epoch 225 | loss=0.70035 | validation PR-AUC=0.59146
+Epoch 250 | loss=0.69207 | validation PR-AUC=0.59735
+Epoch 275 | loss=0.67317 | validation PR-AUC=0.60067
+Epoch 300 | loss=0.66140 | validation PR-AUC=0.60258
+
+Final results
+  experiment_name              graph_name                 pipeline  roc_auc   pr_auc       f1  training_seconds  first_run_seconds  peak_gpu_memory_mb
+equal_edge_budget   net_rsr__budget_25000 end_to_end_graphsage_mlp 0.832153 0.507696 0.493210          1.789843           1.789843          149.142578
+equal_edge_budget   net_rsr__budget_50000 end_to_end_graphsage_mlp 0.827726 0.493612 0.491727          1.664062           1.664062          150.288086
+equal_edge_budget   net_rsr__budget_98630 end_to_end_graphsage_mlp 0.835754 0.503971 0.504240          1.681634           1.681634          154.583008
+equal_edge_budget  net_rsr__budget_250000 end_to_end_graphsage_mlp 0.841781 0.519660 0.515708          1.713332           1.713332          160.151855
+equal_edge_budget  net_rsr__budget_500000 end_to_end_graphsage_mlp 0.850422 0.538953 0.513893          1.761271           1.761271          170.555176
+equal_edge_budget net_rsr__budget_6805486 end_to_end_graphsage_mlp 0.859542 0.590916 0.534082          3.367256           3.367256          653.708984
+equal_edge_budget   net_rtr__budget_25000 end_to_end_graphsage_mlp 0.837891 0.517005 0.505277          1.660101           1.660101          149.142578
+equal_edge_budget   net_rtr__budget_50000 end_to_end_graphsage_mlp 0.834461 0.514428 0.504389          1.661297           1.661297          150.288086
+equal_edge_budget   net_rtr__budget_98630 end_to_end_graphsage_mlp 0.839166 0.517852 0.509887          1.681079           1.681079          154.583008
+equal_edge_budget  net_rtr__budget_250000 end_to_end_graphsage_mlp 0.849101 0.543450 0.525818          1.698977           1.698977          160.151855
+equal_edge_budget  net_rtr__budget_500000 end_to_end_graphsage_mlp 0.852321 0.552650 0.527929          1.753586           1.753586          170.555176
+equal_edge_budget net_rtr__budget_1147232 end_to_end_graphsage_mlp 0.856760 0.573307 0.531431          1.910837           1.910837          199.261230
+equal_edge_budget   net_rur__budget_25000 end_to_end_graphsage_mlp 0.873175 0.581486 0.564477          1.652124           1.652124          149.142578
+equal_edge_budget   net_rur__budget_50000 end_to_end_graphsage_mlp 0.882097 0.595140 0.577544          1.651973           1.651973          150.288086
+equal_edge_budget   net_rur__budget_98630 end_to_end_graphsage_mlp 0.899199 0.631334 0.601005          1.655440           1.655440          154.583008
+
+Saved: results/edge_budgets/edge_budgets_seed_123.csv

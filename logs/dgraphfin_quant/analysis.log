@@ -1,0 +1,18 @@
+                             PR-AUC  store MB  load s   fit Cp s  upfront s  ref Cb s   k*  cost@k=10 (reuse/ref) rel RMSE
+fit_mode   precision                                                                                                      
+dataloader fp32       0.0389±0.0002     903.0    0.29   66.4±2.0      100.1      16.6  NaN                   4.63  0.0e+00
+gpu        fp32       0.0389±0.0003     903.0    0.35    2.1±0.0      100.1      16.6  7.1                   0.75  0.0e+00
+dataloader fp16       0.0389±0.0003     452.0    0.19   70.4±3.2       99.4      16.6  NaN                   4.86  2.1e-04
+gpu        fp16       0.0389±0.0003     452.0    0.18    2.1±0.1       99.4      16.6  6.9                   0.74  2.1e-04
+dataloader int8       0.0384±0.0001     226.0    0.18  54.0±14.9       99.4      16.6  NaN                   3.87  3.8e-01
+gpu        int8       0.0384±0.0001     226.0    0.09    1.8±0.4       99.4      16.6  6.8                   0.71  3.8e-01
+
+per-seed k* (NaN = no finite break-even):
+seed                   123   42    717
+fit_mode   precision                  
+dataloader fp32        NaN   NaN   NaN
+           fp16        NaN   NaN   NaN
+           int8        NaN   NaN   NaN
+gpu        fp32       8.52  5.38  8.60
+           fp16       8.39  5.30  8.34
+           int8       7.99  5.32  7.85

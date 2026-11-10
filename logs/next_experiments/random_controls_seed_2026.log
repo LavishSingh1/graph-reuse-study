@@ -1,0 +1,87 @@
+Done loading data from cached files.
+
+Canonical relation types
+('review', 'net_rsr', 'review') stored edges: 6805486
+('review', 'net_rtr', 'review') stored edges: 1147232
+('review', 'net_rur', 'review') stored edges: 98630
+
+Experiment configuration
+{
+  "seed": 2026,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30
+}
+
+Random controls: raw features + MLP
+Epoch 001 | loss=1.18547 | validation PR-AUC=0.16209
+Epoch 025 | loss=1.13969 | validation PR-AUC=0.29960
+Epoch 050 | loss=1.04143 | validation PR-AUC=0.31245
+Epoch 075 | loss=1.00008 | validation PR-AUC=0.35200
+Epoch 100 | loss=0.97482 | validation PR-AUC=0.39586
+Epoch 125 | loss=0.94966 | validation PR-AUC=0.43179
+Epoch 150 | loss=0.92647 | validation PR-AUC=0.45302
+Epoch 175 | loss=0.90979 | validation PR-AUC=0.46708
+Epoch 200 | loss=0.88984 | validation PR-AUC=0.47492
+Epoch 225 | loss=0.87958 | validation PR-AUC=0.48454
+Epoch 250 | loss=0.86843 | validation PR-AUC=0.49250
+Epoch 275 | loss=0.85532 | validation PR-AUC=0.50078
+Epoch 300 | loss=0.84584 | validation PR-AUC=0.50733
+
+Random controls: random linear projection
+Epoch 001 | loss=1.18744 | validation PR-AUC=0.15654
+Epoch 025 | loss=1.12670 | validation PR-AUC=0.25628
+Epoch 050 | loss=1.04499 | validation PR-AUC=0.32132
+Epoch 075 | loss=0.98717 | validation PR-AUC=0.40083
+Epoch 100 | loss=0.95674 | validation PR-AUC=0.42924
+Epoch 125 | loss=0.93229 | validation PR-AUC=0.45219
+Epoch 150 | loss=0.90839 | validation PR-AUC=0.46910
+Epoch 175 | loss=0.89374 | validation PR-AUC=0.47894
+Epoch 200 | loss=0.87797 | validation PR-AUC=0.48688
+Epoch 225 | loss=0.86845 | validation PR-AUC=0.49516
+Epoch 250 | loss=0.85699 | validation PR-AUC=0.50380
+Epoch 275 | loss=0.85000 | validation PR-AUC=0.51228
+Epoch 300 | loss=0.83461 | validation PR-AUC=0.51924
+
+Random controls: random nonlinear MLP encoder
+Epoch 001 | loss=1.18477 | validation PR-AUC=0.16559
+Epoch 025 | loss=1.15948 | validation PR-AUC=0.24523
+Epoch 050 | loss=1.09445 | validation PR-AUC=0.26434
+Epoch 075 | loss=1.04668 | validation PR-AUC=0.29679
+Epoch 100 | loss=1.02430 | validation PR-AUC=0.32213
+Epoch 125 | loss=1.00365 | validation PR-AUC=0.35223
+Epoch 150 | loss=0.98382 | validation PR-AUC=0.37583
+Epoch 175 | loss=0.96522 | validation PR-AUC=0.38839
+Epoch 200 | loss=0.95176 | validation PR-AUC=0.39533
+Epoch 225 | loss=0.93780 | validation PR-AUC=0.40081
+Epoch 250 | loss=0.93310 | validation PR-AUC=0.40622
+Epoch 275 | loss=0.92494 | validation PR-AUC=0.41058
+Epoch 300 | loss=0.91400 | validation PR-AUC=0.41438
+
+Random controls: random GraphSAGE encoder
+Epoch 001 | loss=1.21280 | validation PR-AUC=0.11638
+Epoch 025 | loss=1.15738 | validation PR-AUC=0.23482
+Epoch 050 | loss=1.07218 | validation PR-AUC=0.25992
+Epoch 075 | loss=1.00753 | validation PR-AUC=0.30376
+Epoch 100 | loss=0.95699 | validation PR-AUC=0.37342
+Epoch 125 | loss=0.91963 | validation PR-AUC=0.42968
+Epoch 150 | loss=0.89721 | validation PR-AUC=0.45976
+Epoch 175 | loss=0.88202 | validation PR-AUC=0.47965
+Epoch 200 | loss=0.86116 | validation PR-AUC=0.49640
+Epoch 225 | loss=0.85186 | validation PR-AUC=0.50714
+Epoch 250 | loss=0.84890 | validation PR-AUC=0.51276
+Epoch 275 | loss=0.83866 | validation PR-AUC=0.51606
+Epoch 300 | loss=0.83217 | validation PR-AUC=0.52505
+
+Final results
+experiment_group relation_name      representation_name                       pipeline  roc_auc   pr_auc       f1  training_seconds  first_run_seconds  peak_gpu_memory_mb
+ random_controls      no_graph             raw_features               raw_features_mlp 0.837044 0.520358 0.504904          0.917897           0.917897          211.792480
+ random_controls      no_graph random_linear_projection   random_linear_projection_mlp 0.842413 0.533574 0.516847          0.868975           0.869145          224.050781
+ random_controls      no_graph     random_nonlinear_mlp random_nonlinear_mlp_embedding 0.804357 0.427678 0.450095          0.852424           0.852977          236.075195
+ random_controls all_relations         random_graphsage random_graphsage_embedding_mlp 0.841551 0.522670 0.504717          0.832016           0.850626          368.570312
+
+Saved: results/next_experiments/random_relation_seed_2026.csv

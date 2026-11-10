@@ -1,0 +1,51 @@
+Done loading data from cached files.
+
+Split and class checks
+train: n=6,047, positive=572, negative=5,475, invalid=0
+validation: n=863, positive=65, negative=798, invalid=0
+test: n=1,729, positive=184, negative=1,545, invalid=0
+
+Canonical Amazon relations
+('user', 'net_upu', 'user'): 351,216 stored directed edges
+('user', 'net_usu', 'user'): 7,132,958 stored directed edges
+('user', 'net_uvu', 'user'): 2,073,474 stored directed edges
+
+========================================================================
+Amazon robustness run: relation=net_upu, seed=717, learning_rate=0.001, patience=100, maximum_epochs=500
+========================================================================
+Epoch 001 | loss=53.15708 | validation PR-AUC=0.05795
+Epoch 025 | loss=4.92681 | validation PR-AUC=0.12882
+Epoch 050 | loss=1.84636 | validation PR-AUC=0.32233
+Epoch 075 | loss=1.23983 | validation PR-AUC=0.28840
+Epoch 100 | loss=1.15753 | validation PR-AUC=0.31542
+Epoch 125 | loss=1.08673 | validation PR-AUC=0.34848
+
+========================================================================
+Amazon robustness run: relation=net_upu, seed=717, learning_rate=0.0005, patience=100, maximum_epochs=500
+========================================================================
+Epoch 001 | loss=53.15708 | validation PR-AUC=0.06019
+Epoch 025 | loss=9.22332 | validation PR-AUC=0.10696
+Epoch 050 | loss=4.32795 | validation PR-AUC=0.11320
+Epoch 075 | loss=2.46360 | validation PR-AUC=0.35064
+Epoch 100 | loss=1.78797 | validation PR-AUC=0.30587
+Epoch 125 | loss=1.46461 | validation PR-AUC=0.29565
+Epoch 150 | loss=1.32052 | validation PR-AUC=0.29096
+Epoch 175 | loss=1.27798 | validation PR-AUC=0.29601
+
+========================================================================
+Amazon robustness run: relation=net_upu, seed=717, learning_rate=0.0001, patience=100, maximum_epochs=500
+========================================================================
+Epoch 001 | loss=53.15708 | validation PR-AUC=0.06338
+Epoch 025 | loss=23.16266 | validation PR-AUC=0.16749
+Epoch 050 | loss=14.49829 | validation PR-AUC=0.10913
+Epoch 075 | loss=12.35831 | validation PR-AUC=0.11453
+Epoch 100 | loss=9.84679 | validation PR-AUC=0.11195
+Epoch 125 | loss=8.90635 | validation PR-AUC=0.11861
+
+Completed configurations
+ learning_rate  roc_auc   pr_auc       f1  training_seconds  best_epoch  peak_gpu_memory_mb
+        0.0010 0.768207 0.399701 0.289362          0.499217          41           66.267578
+        0.0005 0.772358 0.410597 0.304348          0.451678          75           66.267578
+        0.0001 0.674518 0.227293 0.196364          0.370453          38           66.267578
+
+Saved: results/amazon/robustness/amazon_e2e_robustness_net_upu_seed_717.csv

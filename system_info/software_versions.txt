@@ -1,0 +1,11 @@
+Python: 3.11.16
+PyTorch: 2.4.0+cu121
+PyTorch CUDA: 12.1
+DGL: 2.4.0+cu124
+NumPy: 1.26.4
+SciPy: 1.13.1
+scikit-learn: 1.5.2
+pandas: 2.2.3
+Matplotlib: 3.9.2
+GPU: NVIDIA RTX A5000
+Compute capability: (8, 6)

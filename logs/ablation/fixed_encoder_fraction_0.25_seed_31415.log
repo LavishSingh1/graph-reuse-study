@@ -1,0 +1,171 @@
+Done loading data from cached files.
+
+Configuration
+{
+  "seed": 31415,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30,
+  "encoder_label_fraction": 1.0,
+  "downstream_label_fraction": 0.25
+}
+Nodes: 45954
+Edges: 8097302
+Encoder training labels: 32167
+Downstream training labels: 8042
+
+Raw features + linear
+Epoch 001 | loss=1.21152 | validation PR-AUC=0.11899
+Epoch 025 | loss=1.19394 | validation PR-AUC=0.13083
+Epoch 050 | loss=1.18194 | validation PR-AUC=0.15115
+Epoch 075 | loss=1.17060 | validation PR-AUC=0.17963
+Epoch 100 | loss=1.16000 | validation PR-AUC=0.20810
+Epoch 125 | loss=1.15017 | validation PR-AUC=0.23061
+Epoch 150 | loss=1.14107 | validation PR-AUC=0.24510
+Epoch 175 | loss=1.13268 | validation PR-AUC=0.25514
+Epoch 200 | loss=1.12493 | validation PR-AUC=0.26199
+Epoch 225 | loss=1.11777 | validation PR-AUC=0.26728
+Epoch 250 | loss=1.11115 | validation PR-AUC=0.27094
+Epoch 275 | loss=1.10503 | validation PR-AUC=0.27435
+Epoch 300 | loss=1.09934 | validation PR-AUC=0.27814
+
+Raw features + mlp
+Epoch 001 | loss=1.18306 | validation PR-AUC=0.13760
+Epoch 025 | loss=1.15308 | validation PR-AUC=0.25024
+Epoch 050 | loss=1.06500 | validation PR-AUC=0.30690
+Epoch 075 | loss=1.00493 | validation PR-AUC=0.34424
+Epoch 100 | loss=0.98042 | validation PR-AUC=0.37546
+Epoch 125 | loss=0.94378 | validation PR-AUC=0.40112
+Epoch 150 | loss=0.92391 | validation PR-AUC=0.42497
+Epoch 175 | loss=0.90638 | validation PR-AUC=0.43284
+Epoch 200 | loss=0.88871 | validation PR-AUC=0.44251
+Epoch 225 | loss=0.87234 | validation PR-AUC=0.44639
+Epoch 250 | loss=0.85222 | validation PR-AUC=0.45072
+Epoch 275 | loss=0.83795 | validation PR-AUC=0.45145
+
+End-to-end GraphSAGE + linear
+Epoch 001 | loss=1.34866 | validation PR-AUC=0.17310
+Epoch 025 | loss=1.15116 | validation PR-AUC=0.24860
+Epoch 050 | loss=1.10122 | validation PR-AUC=0.28829
+Epoch 075 | loss=1.05441 | validation PR-AUC=0.31922
+Epoch 100 | loss=1.01643 | validation PR-AUC=0.34335
+Epoch 125 | loss=0.99226 | validation PR-AUC=0.37416
+Epoch 150 | loss=0.96450 | validation PR-AUC=0.40080
+Epoch 175 | loss=0.93792 | validation PR-AUC=0.42709
+Epoch 200 | loss=0.91519 | validation PR-AUC=0.45219
+Epoch 225 | loss=0.90044 | validation PR-AUC=0.47467
+Epoch 250 | loss=0.88581 | validation PR-AUC=0.48984
+Epoch 275 | loss=0.86577 | validation PR-AUC=0.50288
+Epoch 300 | loss=0.86309 | validation PR-AUC=0.51498
+
+End-to-end GraphSAGE + mlp
+Epoch 001 | loss=1.20595 | validation PR-AUC=0.14860
+Epoch 025 | loss=1.13977 | validation PR-AUC=0.29527
+Epoch 050 | loss=1.04229 | validation PR-AUC=0.31785
+Epoch 075 | loss=0.99258 | validation PR-AUC=0.38546
+Epoch 100 | loss=0.95104 | validation PR-AUC=0.43218
+Epoch 125 | loss=0.91428 | validation PR-AUC=0.47183
+Epoch 150 | loss=0.87258 | validation PR-AUC=0.51547
+Epoch 175 | loss=0.85319 | validation PR-AUC=0.54179
+Epoch 200 | loss=0.83211 | validation PR-AUC=0.55621
+Epoch 225 | loss=0.82225 | validation PR-AUC=0.56267
+Epoch 250 | loss=0.81097 | validation PR-AUC=0.57268
+Epoch 275 | loss=0.80114 | validation PR-AUC=0.57710
+Epoch 300 | loss=0.79383 | validation PR-AUC=0.58291
+
+Extracting supervised embeddings
+Saved: embeddings/ablation/supervised_graphsage_seed_31415_encoder_fraction_1.00.pt
+Embedding storage: 11.221 MB
+
+Frozen supervised embeddings + linear
+Epoch 001 | loss=1.41911 | validation PR-AUC=0.20611
+Epoch 025 | loss=1.12370 | validation PR-AUC=0.39663
+Epoch 050 | loss=1.03734 | validation PR-AUC=0.46467
+Epoch 075 | loss=0.97488 | validation PR-AUC=0.48669
+Epoch 100 | loss=0.93215 | validation PR-AUC=0.49436
+Epoch 125 | loss=0.90300 | validation PR-AUC=0.49845
+Epoch 150 | loss=0.88308 | validation PR-AUC=0.50071
+Epoch 175 | loss=0.86936 | validation PR-AUC=0.50253
+Epoch 200 | loss=0.85982 | validation PR-AUC=0.50367
+Epoch 225 | loss=0.85309 | validation PR-AUC=0.50479
+Epoch 250 | loss=0.84828 | validation PR-AUC=0.50595
+Epoch 275 | loss=0.84478 | validation PR-AUC=0.50671
+Epoch 300 | loss=0.84218 | validation PR-AUC=0.50776
+
+Frozen supervised embeddings + mlp
+Epoch 001 | loss=1.17719 | validation PR-AUC=0.37579
+Epoch 025 | loss=0.88717 | validation PR-AUC=0.50071
+Epoch 050 | loss=0.85990 | validation PR-AUC=0.51053
+Epoch 075 | loss=0.84444 | validation PR-AUC=0.51550
+Epoch 100 | loss=0.83370 | validation PR-AUC=0.51967
+Epoch 125 | loss=0.82864 | validation PR-AUC=0.52310
+Epoch 150 | loss=0.82373 | validation PR-AUC=0.52703
+Epoch 175 | loss=0.81563 | validation PR-AUC=0.53052
+Epoch 200 | loss=0.80961 | validation PR-AUC=0.53421
+Epoch 225 | loss=0.80450 | validation PR-AUC=0.53744
+Epoch 250 | loss=0.79629 | validation PR-AUC=0.54100
+Epoch 275 | loss=0.79168 | validation PR-AUC=0.54508
+Epoch 300 | loss=0.78151 | validation PR-AUC=0.54842
+
+Raw features + supervised embeddings + MLP
+Epoch 001 | loss=1.18914 | validation PR-AUC=0.31547
+Epoch 025 | loss=0.89297 | validation PR-AUC=0.50171
+Epoch 050 | loss=0.86065 | validation PR-AUC=0.51235
+Epoch 075 | loss=0.83499 | validation PR-AUC=0.51726
+Epoch 100 | loss=0.82528 | validation PR-AUC=0.52152
+Epoch 125 | loss=0.82032 | validation PR-AUC=0.52696
+Epoch 150 | loss=0.81263 | validation PR-AUC=0.53141
+Epoch 175 | loss=0.80064 | validation PR-AUC=0.53408
+Epoch 200 | loss=0.79427 | validation PR-AUC=0.53774
+Epoch 225 | loss=0.78794 | validation PR-AUC=0.54038
+Epoch 250 | loss=0.77410 | validation PR-AUC=0.54216
+Epoch 275 | loss=0.76057 | validation PR-AUC=0.54364
+Epoch 300 | loss=0.75324 | validation PR-AUC=0.54565
+
+Random GraphSAGE embeddings + MLP
+Epoch 001 | loss=1.18702 | validation PR-AUC=0.20921
+Epoch 025 | loss=1.12906 | validation PR-AUC=0.27543
+Epoch 050 | loss=1.06744 | validation PR-AUC=0.29947
+Epoch 075 | loss=1.02713 | validation PR-AUC=0.33169
+Epoch 100 | loss=0.99740 | validation PR-AUC=0.35811
+Epoch 125 | loss=0.98149 | validation PR-AUC=0.37409
+Epoch 150 | loss=0.95660 | validation PR-AUC=0.38757
+Epoch 175 | loss=0.94319 | validation PR-AUC=0.39419
+Epoch 200 | loss=0.92398 | validation PR-AUC=0.40128
+Epoch 225 | loss=0.89878 | validation PR-AUC=0.40834
+Epoch 250 | loss=0.88751 | validation PR-AUC=0.41776
+Epoch 275 | loss=0.88368 | validation PR-AUC=0.42564
+Epoch 300 | loss=0.86174 | validation PR-AUC=0.43383
+
+Neighbor-averaged features + MLP
+Epoch 001 | loss=1.18231 | validation PR-AUC=0.16900
+Epoch 025 | loss=1.18198 | validation PR-AUC=0.18706
+Epoch 050 | loss=1.18084 | validation PR-AUC=0.19718
+Epoch 075 | loss=1.17814 | validation PR-AUC=0.20476
+Epoch 100 | loss=1.17485 | validation PR-AUC=0.20805
+Epoch 125 | loss=1.16653 | validation PR-AUC=0.21597
+Epoch 150 | loss=1.15913 | validation PR-AUC=0.22074
+Epoch 175 | loss=1.15095 | validation PR-AUC=0.22733
+Epoch 200 | loss=1.14414 | validation PR-AUC=0.23279
+Epoch 225 | loss=1.14134 | validation PR-AUC=0.24070
+Epoch 250 | loss=1.13609 | validation PR-AUC=0.24255
+Epoch 275 | loss=1.13028 | validation PR-AUC=0.24253
+Epoch 300 | loss=1.12841 | validation PR-AUC=0.24630
+
+Final results
+                          pipeline  roc_auc   pr_auc       f1  training_seconds  peak_gpu_memory_mb  best_epoch
+               raw_features_linear 0.723942 0.301100 0.368141          0.428231          147.325684         300
+                  raw_features_mlp 0.815792 0.461787 0.460539          0.758134          213.132812         245
+       end_to_end_graphsage_linear 0.842471 0.508879 0.500000          3.198052          759.844238         300
+          end_to_end_graphsage_mlp 0.860897 0.586745 0.540271          3.650808          513.127930         299
+frozen_supervised_graphsage_linear 0.840297 0.503272 0.487843          0.343922          407.680664         300
+   frozen_supervised_graphsage_mlp 0.844420 0.538844 0.503268          0.808316          469.732422         296
+            raw_plus_embedding_mlp 0.844601 0.542556 0.512605          0.820155          487.365723         298
+    random_graphsage_embedding_mlp 0.808654 0.449752 0.460086          0.813609          481.732422         298
+        neighbor_mean_features_mlp 0.585696 0.217442 0.255892          0.781808          475.318848         293
+
+Saved: results/ablation/matched_ablation_seed_31415_encoder_1.00_downstream_0.25.csv

@@ -1,0 +1,78 @@
+Done loading data from cached files.
+
+Split and class checks
+train: n=6,047, positive=572, negative=5,475, invalid=0
+validation: n=863, positive=65, negative=798, invalid=0
+test: n=1,729, positive=184, negative=1,545, invalid=0
+
+Canonical Amazon relations
+('user', 'net_upu', 'user'): 351,216 stored directed edges
+('user', 'net_usu', 'user'): 7,132,958 stored directed edges
+('user', 'net_uvu', 'user'): 2,073,474 stored directed edges
+
+Configuration
+{
+  "seed": 42,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30
+}
+Nodes: 11,944
+Features: (11944, 25)
+Label values: (tensor([0, 1]), tensor([11123,   821]))
+
+Raw features + MLP
+Epoch 001 | loss=6.96915 | validation PR-AUC=0.06983
+Epoch 025 | loss=2.16242 | validation PR-AUC=0.75317
+Epoch 050 | loss=1.38110 | validation PR-AUC=0.76433
+Epoch 075 | loss=1.04755 | validation PR-AUC=0.78129
+Epoch 100 | loss=0.82057 | validation PR-AUC=0.79937
+Epoch 125 | loss=0.58490 | validation PR-AUC=0.80772
+Epoch 150 | loss=0.53299 | validation PR-AUC=0.81366
+Epoch 175 | loss=0.47466 | validation PR-AUC=0.81292
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=19.84810 | validation PR-AUC=0.15556
+Epoch 025 | loss=2.43846 | validation PR-AUC=0.18387
+Epoch 050 | loss=1.25339 | validation PR-AUC=0.26419
+
+Train reusable GraphSAGE encoder with linear head
+Epoch 001 | loss=183.39027 | validation PR-AUC=0.06699
+Epoch 025 | loss=45.39928 | validation PR-AUC=0.32350
+Epoch 050 | loss=25.65999 | validation PR-AUC=0.24155
+Epoch 075 | loss=16.56813 | validation PR-AUC=0.66327
+Epoch 100 | loss=10.08252 | validation PR-AUC=0.71695
+Epoch 125 | loss=5.63615 | validation PR-AUC=0.61362
+Epoch 150 | loss=3.72876 | validation PR-AUC=0.73466
+Epoch 175 | loss=2.21901 | validation PR-AUC=0.74357
+Epoch 200 | loss=1.74371 | validation PR-AUC=0.76198
+Epoch 225 | loss=1.42014 | validation PR-AUC=0.75748
+Epoch 250 | loss=1.86818 | validation PR-AUC=0.76434
+
+Frozen GraphSAGE embeddings + MLP
+Epoch 001 | loss=22.04235 | validation PR-AUC=0.08627
+Epoch 025 | loss=3.06973 | validation PR-AUC=0.48396
+Epoch 050 | loss=1.13038 | validation PR-AUC=0.56078
+Epoch 075 | loss=0.75414 | validation PR-AUC=0.73494
+Epoch 100 | loss=0.65279 | validation PR-AUC=0.77054
+Epoch 125 | loss=0.61927 | validation PR-AUC=0.75588
+
+Raw features + frozen embeddings + MLP
+Epoch 001 | loss=32.26983 | validation PR-AUC=0.15348
+Epoch 025 | loss=3.38176 | validation PR-AUC=0.16438
+Epoch 050 | loss=1.41059 | validation PR-AUC=0.73819
+Epoch 075 | loss=0.81914 | validation PR-AUC=0.78473
+Epoch 100 | loss=0.65115 | validation PR-AUC=0.79945
+Epoch 125 | loss=0.56799 | validation PR-AUC=0.79873
+
+Results
+graph_name                      pipeline  roc_auc   pr_auc       f1  training_seconds  peak_gpu_memory_mb
+   net_upu              raw_features_mlp 0.954874 0.853893 0.818182          0.334634           39.518555
+   net_upu      end_to_end_graphsage_mlp 0.772038 0.434536 0.379447          0.168310           65.128906
+   net_upu          frozen_graphsage_mlp 0.911835 0.768868 0.752874          0.176408           57.248047
+   net_upu raw_plus_frozen_embedding_mlp 0.919127 0.806435 0.798762          0.172775           61.322266
+Saved: results/amazon/reuse/amazon_reuse_net_upu_seed_42.csv

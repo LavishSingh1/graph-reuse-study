@@ -1,0 +1,40 @@
+Done loading data from cached files.
+
+Experiment configuration
+{
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 10,
+  "patience": 5,
+  "label_fraction": 1.0,
+  "seed": 42,
+  "graph_device": "cuda"
+}
+Selected training labels: 32167
+Graph nodes: 45954
+Graph edges: 8097302
+
+Running raw-feature MLP
+Epoch 001 | loss=1.18462 | val PR-AUC=0.15729
+Epoch 010 | loss=1.17360 | val PR-AUC=0.30051
+
+Running end-to-end GraphSAGE
+Epoch 001 | loss=1.37471 | val PR-AUC=0.14652
+Epoch 010 | loss=1.20164 | val PR-AUC=0.16717
+
+Running precomputed GraphSAGE plus MLP
+Epoch 001 | loss=1.37471 | val PR-AUC=0.14652
+Epoch 010 | loss=1.20164 | val PR-AUC=0.16717
+Epoch 001 | loss=1.18435 | val PR-AUC=0.19449
+Epoch 010 | loss=1.16208 | val PR-AUC=0.25777
+
+Final results
+                 pipeline  training_time_seconds  peak_gpu_memory_mb  best_epoch  best_validation_pr_auc  roc_auc   pr_auc       f1  inference_time_seconds  inference_peak_gpu_memory_mb  embedding_training_seconds  embedding_extraction_seconds  embedding_storage_mb  seed  label_fraction  hidden_dimension  embedding_dimension  cpu_process_memory_mb_end  embedding_training_peak_gpu_memory_mb                                     embedding_file
+                  raw_mlp               0.149584          211.792480          10                0.300513 0.708848 0.301300 0.360830                0.000622                    170.487793                    0.000000                      0.000000              0.000000    42             1.0                64                   64                1332.511719                                    NaN                                                NaN
+     end_to_end_graphsage               0.135556          760.455566          10                0.167173 0.551744 0.156176 0.259714                0.003550                    451.708984                    0.000000                      0.000000              0.000000    42             1.0                64                   64                1332.511719                                    NaN                                                NaN
+precomputed_graphsage_mlp               0.044146          469.399414          10                0.257772 0.691533 0.267585 0.342280                0.000635                    430.202637                    0.116469                      0.003447             11.220868    42             1.0                64                   64                1332.511719                             483.362305 embeddings/yelp_graphsage_seed_42_fraction_1.00.pt
+
+Saved results to results/run_seed_42_fraction_1.00.csv

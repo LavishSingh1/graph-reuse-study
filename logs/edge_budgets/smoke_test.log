@@ -1,0 +1,159 @@
+Done loading data from cached files.
+
+Available YelpChi relations
+net_rsr: 6,805,486 stored directed edges
+net_rtr: 1,147,232 stored directed edges
+net_rur: 98,630 stored directed edges
+
+Experiment configuration
+{
+  "seed": 42,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 10,
+  "patience": 5
+}
+Nodes: 45,954
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 25,000
+Actual stored edges: 25,000
+Edges after self-loops: 70,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18914 | validation PR-AUC=0.18168
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 50,000
+Actual stored edges: 50,000
+Edges after self-loops: 95,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18861 | validation PR-AUC=0.17874
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 98,630
+Actual stored edges: 98,630
+Edges after self-loops: 144,584
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18865 | validation PR-AUC=0.18890
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 250,000
+Actual stored edges: 250,000
+Edges after self-loops: 295,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18846 | validation PR-AUC=0.18604
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 500,000
+Actual stored edges: 500,000
+Edges after self-loops: 545,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18823 | validation PR-AUC=0.18261
+
+------------------------------------------------------------------------------
+Relation: net_rsr
+Requested budget: 6,805,486
+Actual stored edges: 6,805,486
+Edges after self-loops: 6,851,440
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18869 | validation PR-AUC=0.18073
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 25,000
+Actual stored edges: 25,000
+Edges after self-loops: 70,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18860 | validation PR-AUC=0.18168
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 50,000
+Actual stored edges: 50,000
+Edges after self-loops: 95,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18823 | validation PR-AUC=0.17700
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 98,630
+Actual stored edges: 98,630
+Edges after self-loops: 144,584
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18825 | validation PR-AUC=0.17814
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 250,000
+Actual stored edges: 250,000
+Edges after self-loops: 295,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18820 | validation PR-AUC=0.17508
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 500,000
+Actual stored edges: 500,000
+Edges after self-loops: 545,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18857 | validation PR-AUC=0.16941
+
+------------------------------------------------------------------------------
+Relation: net_rtr
+Requested budget: 1,147,232
+Actual stored edges: 1,147,232
+Edges after self-loops: 1,193,186
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.18862 | validation PR-AUC=0.17028
+
+------------------------------------------------------------------------------
+Relation: net_rur
+Requested budget: 25,000
+Actual stored edges: 25,000
+Edges after self-loops: 70,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19045 | validation PR-AUC=0.19370
+
+------------------------------------------------------------------------------
+Relation: net_rur
+Requested budget: 50,000
+Actual stored edges: 50,000
+Edges after self-loops: 95,954
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19086 | validation PR-AUC=0.20294
+
+------------------------------------------------------------------------------
+Relation: net_rur
+Requested budget: 98,630
+Actual stored edges: 98,630
+Edges after self-loops: 144,584
+------------------------------------------------------------------------------
+Epoch 001 | loss=1.19112 | validation PR-AUC=0.20566
+
+Final results
+  experiment_name              graph_name                 pipeline  roc_auc   pr_auc       f1  training_seconds  first_run_seconds  peak_gpu_memory_mb
+equal_edge_budget   net_rsr__budget_25000 end_to_end_graphsage_mlp 0.673633 0.253566 0.320348          0.190038           0.190038          149.142578
+equal_edge_budget   net_rsr__budget_50000 end_to_end_graphsage_mlp 0.675831 0.246224 0.325459          0.059514           0.059514          150.288086
+equal_edge_budget   net_rsr__budget_98630 end_to_end_graphsage_mlp 0.677200 0.253314 0.330378          0.060967           0.060967          154.583008
+equal_edge_budget  net_rsr__budget_250000 end_to_end_graphsage_mlp 0.676101 0.258207 0.334318          0.061485           0.061485          160.151855
+equal_edge_budget  net_rsr__budget_500000 end_to_end_graphsage_mlp 0.679691 0.258879 0.339594          0.064666           0.064666          170.555176
+equal_edge_budget net_rsr__budget_6805486 end_to_end_graphsage_mlp 0.683325 0.267787 0.344242          0.113146           0.113146          653.708984
+equal_edge_budget   net_rtr__budget_25000 end_to_end_graphsage_mlp 0.677921 0.262284 0.327076          0.060524           0.060524          149.142578
+equal_edge_budget   net_rtr__budget_50000 end_to_end_graphsage_mlp 0.673725 0.245301 0.327600          0.056671           0.056671          150.288086
+equal_edge_budget   net_rtr__budget_98630 end_to_end_graphsage_mlp 0.676344 0.251339 0.330354          0.061779           0.061779          154.583008
+equal_edge_budget  net_rtr__budget_250000 end_to_end_graphsage_mlp 0.674692 0.261273 0.336378          0.058410           0.058410          160.151855
+equal_edge_budget  net_rtr__budget_500000 end_to_end_graphsage_mlp 0.679743 0.257173 0.335676          0.064521           0.064521          170.555176
+equal_edge_budget net_rtr__budget_1147232 end_to_end_graphsage_mlp 0.683340 0.265429 0.340475          0.070323           0.070323          199.261230
+equal_edge_budget   net_rur__budget_25000 end_to_end_graphsage_mlp 0.707719 0.304111 0.358590          0.055484           0.055484          149.142578
+equal_edge_budget   net_rur__budget_50000 end_to_end_graphsage_mlp 0.720806 0.317531 0.372777          0.056314           0.056314          150.288086
+equal_edge_budget   net_rur__budget_98630 end_to_end_graphsage_mlp 0.732078 0.333917 0.392917          0.056368           0.056368          154.583008
+
+Saved: results/edge_budgets/edge_budgets_seed_42.csv

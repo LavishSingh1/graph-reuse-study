@@ -1,0 +1,11 @@
+Loaded files: 5
+Loaded rows: 15
+
+Robustness summary
+ learning_rate  roc_auc_mean  roc_auc_std  roc_auc_count  pr_auc_mean  pr_auc_std  pr_auc_count  f1_mean   f1_std  f1_count  training_seconds_mean  training_seconds_std  training_seconds_count  best_epoch_mean  best_epoch_std  best_epoch_count  peak_gpu_memory_mb_mean  peak_gpu_memory_mb_std  peak_gpu_memory_mb_count
+        0.0001      0.650462     0.030127              5     0.241866    0.043723             5 0.256108 0.044913         5               0.551853              0.437228                       5            126.4      208.410172                 5                66.267578                     0.0                         5
+        0.0005      0.762267     0.088812              5     0.453113    0.170768             5 0.415121 0.222303         5               0.654026              0.370280                       5            170.8      185.814962                 5                66.267578                     0.0                         5
+        0.0010      0.791817     0.078327              5     0.491529    0.171234             5 0.470014 0.206317         5               0.658188              0.447050                       5            107.8      183.802067                 5                66.267578                     0.0                         5
+
+Best learning rate by mean PR-AUC: 0.001
+Saved: results/amazon/amazon_e2e_robustness_summary.csv

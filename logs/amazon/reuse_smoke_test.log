@@ -1,0 +1,49 @@
+Done loading data from cached files.
+
+Split and class checks
+train: n=6,047, positive=572, negative=5,475, invalid=0
+validation: n=863, positive=65, negative=798, invalid=0
+test: n=1,729, positive=184, negative=1,545, invalid=0
+
+Canonical Amazon relations
+('user', 'net_upu', 'user'): 351,216 stored directed edges
+('user', 'net_usu', 'user'): 7,132,958 stored directed edges
+('user', 'net_uvu', 'user'): 2,073,474 stored directed edges
+
+Configuration
+{
+  "seed": 42,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 10,
+  "patience": 5
+}
+Nodes: 11,944
+Features: (11944, 25)
+Label values: (tensor([0, 1]), tensor([11123,   821]))
+
+Raw features + MLP
+Epoch 001 | loss=6.96915 | validation PR-AUC=0.06983
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=19.84810 | validation PR-AUC=0.15556
+
+Train reusable GraphSAGE encoder with linear head
+Epoch 001 | loss=183.39027 | validation PR-AUC=0.06699
+
+Frozen GraphSAGE embeddings + MLP
+Epoch 001 | loss=26.12315 | validation PR-AUC=0.08058
+
+Raw features + frozen embeddings + MLP
+Epoch 001 | loss=37.33469 | validation PR-AUC=0.10247
+
+Results
+graph_name                      pipeline  roc_auc   pr_auc       f1  training_seconds  peak_gpu_memory_mb
+   net_upu              raw_features_mlp 0.878089 0.785207 0.804878          0.114717           39.518555
+   net_upu      end_to_end_graphsage_mlp 0.648730 0.192034 0.148148          0.037522           65.128906
+   net_upu          frozen_graphsage_mlp 0.638510 0.142440 0.251670          0.014175           57.248047
+   net_upu raw_plus_frozen_embedding_mlp 0.595008 0.136630 0.228261          0.009487           61.322266
+Saved: results/amazon/reuse/amazon_reuse_net_upu_seed_42.csv

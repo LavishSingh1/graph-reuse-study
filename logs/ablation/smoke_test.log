@@ -1,0 +1,64 @@
+Done loading data from cached files.
+
+Configuration
+{
+  "seed": 42,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 10,
+  "patience": 5,
+  "encoder_label_fraction": 1.0,
+  "downstream_label_fraction": 1.0
+}
+Nodes: 45954
+Edges: 8097302
+Encoder training labels: 32167
+Downstream training labels: 32167
+
+Raw features + linear
+Epoch 001 | loss=1.22524 | validation PR-AUC=0.12224
+
+Raw features + mlp
+Epoch 001 | loss=1.18462 | validation PR-AUC=0.15729
+
+End-to-end GraphSAGE + linear
+Epoch 001 | loss=1.37471 | validation PR-AUC=0.14652
+
+End-to-end GraphSAGE + mlp
+Epoch 001 | loss=1.18867 | validation PR-AUC=0.17769
+
+Extracting supervised embeddings
+Saved: embeddings/ablation/supervised_graphsage_seed_42_encoder_fraction_1.00.pt
+Embedding storage: 11.221 MB
+
+Frozen supervised embeddings + linear
+Epoch 001 | loss=1.20179 | validation PR-AUC=0.13559
+
+Frozen supervised embeddings + mlp
+Epoch 001 | loss=1.19511 | validation PR-AUC=0.18264
+
+Raw features + supervised embeddings + MLP
+Epoch 001 | loss=1.18727 | validation PR-AUC=0.15677
+
+Random GraphSAGE embeddings + MLP
+Epoch 001 | loss=1.19524 | validation PR-AUC=0.17218
+
+Neighbor-averaged features + MLP
+Epoch 001 | loss=1.18389 | validation PR-AUC=0.14458
+
+Final results
+                          pipeline  roc_auc   pr_auc       f1  training_seconds  peak_gpu_memory_mb  best_epoch
+               raw_features_linear 0.441206 0.127222 0.247521          0.108525          148.528320          10
+                  raw_features_mlp 0.708848 0.301301 0.359546          0.036563          213.132812          10
+       end_to_end_graphsage_linear 0.551744 0.156178 0.240419          0.123002          759.844238          10
+          end_to_end_graphsage_mlp 0.684546 0.268952 0.346041          0.119403          513.127930          10
+frozen_supervised_graphsage_linear 0.504127 0.144440 0.242504          0.013605          408.883301          10
+   frozen_supervised_graphsage_mlp 0.658650 0.234521 0.300806          0.028549          469.732422          10
+            raw_plus_embedding_mlp 0.691670 0.258109 0.331132          0.028668          487.365723          10
+    random_graphsage_embedding_mlp 0.659470 0.235159 0.303727          0.028544          481.732422          10
+        neighbor_mean_features_mlp 0.508166 0.164558 0.249514          0.026806          475.318848           6
+
+Saved: results/ablation/matched_ablation_seed_42_encoder_1.00_downstream_1.00.csv

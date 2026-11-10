@@ -1,0 +1,38 @@
+Downloading or loading FraudYelpDataset...
+Downloading data/yelp.zip from https://data.dgl.ai/dataset/FraudYelp.zip...
+Extracting file to data/yelp_a7a80596
+Done saving data into cached files.
+
+Dataset loaded successfully
+======================================================================
+Dataset classes: 2
+Node types: ['review']
+Canonical edge types:
+  ('review', 'net_rsr', 'review'): 6,805,486 edges
+  ('review', 'net_rtr', 'review'): 1,147,232 edges
+  ('review', 'net_rur', 'review'): 98,630 edges
+
+Total nodes: 45,954
+Total edges: 8,051,348
+
+Node-data fields: ['feature', 'label', 'train_mask', 'val_mask', 'test_mask']
+Feature shape: (45954, 32)
+Label shape: (45954,)
+Feature dtype: torch.float32
+Label dtype: torch.int64
+
+Split sizes
+Train: 32,167
+Validation: 4,595
+Test: 9,192
+
+Class counts
+Class 0: 39,277
+Class 1: 6,677
+Positive fraction: 0.14529747138442792
+Negative-to-positive ratio: 5.882432230043433
+
+CUDA available: True
+GPU: NVIDIA RTX A5000
+
+Dataset check completed successfully.

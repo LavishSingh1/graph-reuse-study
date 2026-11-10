@@ -1,0 +1,171 @@
+Done loading data from cached files.
+
+Available YelpChi relations
+net_rsr: 6,805,486 stored directed edges
+net_rtr: 1,147,232 stored directed edges
+net_rur: 98,630 stored directed edges
+
+Experiment configuration
+{
+  "seed": 42,
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 10,
+  "patience": 5
+}
+Nodes: 45,954
+
+==============================================================================
+Relation subset: net_rsr
+Edges before self-loops: 6,805,486
+Edges after self-loops: 6,851,440
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18869 | validation PR-AUC=0.18073
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.37482 | validation PR-AUC=0.14754
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19511 | validation PR-AUC=0.18066
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18731 | validation PR-AUC=0.15557
+
+==============================================================================
+Relation subset: net_rtr
+Edges before self-loops: 1,147,232
+Edges after self-loops: 1,193,186
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18862 | validation PR-AUC=0.17028
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.37910 | validation PR-AUC=0.14506
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19529 | validation PR-AUC=0.17319
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18752 | validation PR-AUC=0.15714
+
+==============================================================================
+Relation subset: net_rur
+Edges before self-loops: 98,630
+Edges after self-loops: 144,584
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.19112 | validation PR-AUC=0.20566
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.42503 | validation PR-AUC=0.13042
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19541 | validation PR-AUC=0.18893
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18717 | validation PR-AUC=0.21968
+
+==============================================================================
+Relation subset: net_rsr__net_rtr
+Edges before self-loops: 7,952,718
+Edges after self-loops: 7,998,672
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18871 | validation PR-AUC=0.17764
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.37491 | validation PR-AUC=0.14678
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19510 | validation PR-AUC=0.18327
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18732 | validation PR-AUC=0.15591
+
+==============================================================================
+Relation subset: net_rsr__net_rur
+Edges before self-loops: 6,904,116
+Edges after self-loops: 6,950,070
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18866 | validation PR-AUC=0.18076
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.37463 | validation PR-AUC=0.14712
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19511 | validation PR-AUC=0.18023
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18726 | validation PR-AUC=0.15662
+
+==============================================================================
+Relation subset: net_rtr__net_rur
+Edges before self-loops: 1,245,862
+Edges after self-loops: 1,291,816
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18859 | validation PR-AUC=0.17167
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.37833 | validation PR-AUC=0.14415
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19523 | validation PR-AUC=0.17036
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18731 | validation PR-AUC=0.16060
+
+==============================================================================
+Relation subset: net_rsr__net_rtr__net_rur
+Edges before self-loops: 8,051,348
+Edges after self-loops: 8,097,302
+==============================================================================
+
+End-to-end GraphSAGE + MLP
+Epoch 001 | loss=1.18867 | validation PR-AUC=0.17769
+
+Training reusable GraphSAGE encoder
+Epoch 001 | loss=1.37471 | validation PR-AUC=0.14652
+
+Frozen GraphSAGE embedding + MLP
+Epoch 001 | loss=1.19511 | validation PR-AUC=0.18264
+
+Raw features + frozen embedding + MLP
+Epoch 001 | loss=1.18727 | validation PR-AUC=0.15677
+
+Final results
+ experiment_name                graph_name                      pipeline  roc_auc   pr_auc       f1  training_seconds  first_run_seconds  peak_gpu_memory_mb
+relation_subsets                   net_rsr      end_to_end_graphsage_mlp 0.683317 0.267785 0.344242          0.233139           0.233139          653.418945
+relation_subsets                   net_rsr          frozen_graphsage_mlp 0.656595 0.231946 0.306667          0.028276           0.125393          423.274414
+relation_subsets                   net_rsr raw_plus_frozen_embedding_mlp 0.691239 0.258154 0.332924          0.028418           0.125535          439.304688
+relation_subsets                   net_rtr      end_to_end_graphsage_mlp 0.683451 0.265532 0.340308          0.069364           0.069364          199.294922
+relation_subsets                   net_rtr          frozen_graphsage_mlp 0.658770 0.230245 0.302001          0.030588           0.081651          165.995605
+relation_subsets                   net_rtr raw_plus_frozen_embedding_mlp 0.690293 0.257447 0.333787          0.029680           0.080743          184.343262
+relation_subsets                   net_rur      end_to_end_graphsage_mlp 0.732078 0.333917 0.392917          0.061195           0.061195          150.548828
+relation_subsets                   net_rur          frozen_graphsage_mlp 0.689963 0.315982 0.357667          0.028496           0.068975          116.436523
+relation_subsets                   net_rur raw_plus_frozen_embedding_mlp 0.701925 0.327072 0.368539          0.029135           0.069614          133.852539
+relation_subsets          net_rsr__net_rtr      end_to_end_graphsage_mlp 0.683533 0.268400 0.344879          0.126550           0.126550          757.446777
+relation_subsets          net_rsr__net_rtr          frozen_graphsage_mlp 0.658425 0.233792 0.297609          0.027837           0.137714          480.208496
+relation_subsets          net_rsr__net_rtr raw_plus_frozen_embedding_mlp 0.691406 0.257578 0.328831          0.028507           0.138383          497.061035
+relation_subsets          net_rsr__net_rur      end_to_end_graphsage_mlp 0.683997 0.268307 0.345750          0.112241           0.112241          669.356934
+relation_subsets          net_rsr__net_rur          frozen_graphsage_mlp 0.657354 0.232567 0.302258          0.033035           0.130985          432.664551
+relation_subsets          net_rsr__net_rur raw_plus_frozen_embedding_mlp 0.691601 0.258278 0.331527          0.034966           0.132916          448.694824
+relation_subsets          net_rtr__net_rur      end_to_end_graphsage_mlp 0.686524 0.267246 0.334909          0.069385           0.069385          203.395508
+relation_subsets          net_rtr__net_rur          frozen_graphsage_mlp 0.657076 0.231789 0.307657          0.029616           0.079762          170.661133
+relation_subsets          net_rtr__net_rur raw_plus_frozen_embedding_mlp 0.690257 0.258415 0.332601          0.030333           0.080479          188.077148
+relation_subsets net_rsr__net_rtr__net_rur      end_to_end_graphsage_mlp 0.684552 0.268943 0.345957          0.127474           0.127474          760.862793
+relation_subsets net_rsr__net_rtr__net_rur          frozen_graphsage_mlp 0.658622 0.234556 0.300334          0.028692           0.137225          481.417480
+relation_subsets net_rsr__net_rtr__net_rur raw_plus_frozen_embedding_mlp 0.691671 0.258109 0.331054          0.030455           0.138989          497.447754
+
+Saved: results/relation_subsets/relation_subsets_seed_42.csv

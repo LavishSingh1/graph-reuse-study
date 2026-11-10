@@ -1,0 +1,86 @@
+Done loading data from cached files.
+
+Experiment configuration
+{
+  "hidden_dimension": 64,
+  "embedding_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "maximum_epochs": 300,
+  "patience": 30,
+  "label_fraction": 0.01,
+  "seed": 123,
+  "graph_device": "cuda"
+}
+Selected training labels: 321
+Graph nodes: 45954
+Graph edges: 8097302
+
+Running raw-feature MLP
+Epoch 001 | loss=1.19472 | val PR-AUC=0.19547
+Epoch 010 | loss=1.17588 | val PR-AUC=0.26289
+Epoch 020 | loss=1.15747 | val PR-AUC=0.27117
+Epoch 030 | loss=1.14018 | val PR-AUC=0.27743
+Epoch 040 | loss=1.10357 | val PR-AUC=0.28774
+Epoch 050 | loss=1.08963 | val PR-AUC=0.29373
+Epoch 060 | loss=1.08398 | val PR-AUC=0.29784
+Epoch 070 | loss=1.01874 | val PR-AUC=0.30122
+Epoch 080 | loss=0.92936 | val PR-AUC=0.30635
+Epoch 090 | loss=0.90996 | val PR-AUC=0.30925
+Epoch 100 | loss=0.86262 | val PR-AUC=0.30735
+Epoch 110 | loss=0.80371 | val PR-AUC=0.31306
+Epoch 120 | loss=0.80348 | val PR-AUC=0.30857
+Epoch 130 | loss=0.75819 | val PR-AUC=0.30285
+Epoch 140 | loss=0.67142 | val PR-AUC=0.30704
+Early stopping at epoch 140
+
+Running end-to-end GraphSAGE
+Epoch 001 | loss=1.21387 | val PR-AUC=0.14399
+Epoch 010 | loss=1.19869 | val PR-AUC=0.19901
+Epoch 020 | loss=1.13473 | val PR-AUC=0.22925
+Epoch 030 | loss=1.05336 | val PR-AUC=0.24468
+Epoch 040 | loss=1.02203 | val PR-AUC=0.24932
+Epoch 050 | loss=1.05979 | val PR-AUC=0.25806
+Epoch 060 | loss=1.01273 | val PR-AUC=0.26748
+Epoch 070 | loss=0.98921 | val PR-AUC=0.27186
+Epoch 080 | loss=0.96308 | val PR-AUC=0.27549
+Epoch 090 | loss=0.91757 | val PR-AUC=0.27547
+Epoch 100 | loss=0.83258 | val PR-AUC=0.27712
+Epoch 110 | loss=0.82241 | val PR-AUC=0.27887
+Epoch 120 | loss=0.83966 | val PR-AUC=0.27141
+Epoch 130 | loss=0.82881 | val PR-AUC=0.27374
+Epoch 140 | loss=0.84715 | val PR-AUC=0.27633
+Early stopping at epoch 141
+
+Running precomputed GraphSAGE plus MLP
+Epoch 001 | loss=1.21387 | val PR-AUC=0.14399
+Epoch 010 | loss=1.19869 | val PR-AUC=0.19901
+Epoch 020 | loss=1.13473 | val PR-AUC=0.22926
+Epoch 030 | loss=1.05336 | val PR-AUC=0.24468
+Epoch 040 | loss=1.02203 | val PR-AUC=0.24932
+Epoch 050 | loss=1.05978 | val PR-AUC=0.25803
+Epoch 060 | loss=1.01273 | val PR-AUC=0.26750
+Epoch 070 | loss=0.98917 | val PR-AUC=0.27188
+Epoch 080 | loss=0.96308 | val PR-AUC=0.27569
+Epoch 090 | loss=0.91822 | val PR-AUC=0.27539
+Epoch 100 | loss=0.83274 | val PR-AUC=0.27633
+Epoch 110 | loss=0.82193 | val PR-AUC=0.27899
+Epoch 120 | loss=0.83965 | val PR-AUC=0.27173
+Epoch 130 | loss=0.83067 | val PR-AUC=0.27306
+Epoch 140 | loss=0.84800 | val PR-AUC=0.27633
+Early stopping at epoch 141
+Epoch 001 | loss=1.18507 | val PR-AUC=0.23438
+Epoch 010 | loss=1.11310 | val PR-AUC=0.28649
+Epoch 020 | loss=0.98909 | val PR-AUC=0.28522
+Epoch 030 | loss=0.87064 | val PR-AUC=0.28464
+Epoch 040 | loss=0.73569 | val PR-AUC=0.28481
+Early stopping at epoch 40
+
+Final results
+                 pipeline  training_time_seconds  peak_gpu_memory_mb  best_epoch  best_validation_pr_auc  roc_auc   pr_auc       f1  inference_time_seconds  inference_peak_gpu_memory_mb  embedding_training_seconds  embedding_extraction_seconds  embedding_storage_mb  seed  label_fraction  hidden_dimension  embedding_dimension  cpu_process_memory_mb_end  embedding_training_peak_gpu_memory_mb                                      embedding_file
+                  raw_mlp               0.705709          211.792480         110                0.313062 0.695116 0.312378 0.345929                0.000569                    170.487793                    0.000000                      0.000000              0.000000   123            0.01                64                   64                1309.933594                                    NaN                                                 NaN
+     end_to_end_graphsage               1.642740          760.455566         111                0.278998 0.677368 0.279332 0.336837                0.003545                    451.708984                    0.000000                      0.000000              0.000000   123            0.01                64                   64                1309.933594                                    NaN                                                 NaN
+precomputed_graphsage_mlp               0.168712          469.399414          10                0.286493 0.676756 0.292333 0.331776                0.000686                    430.202637                    1.618257                      0.003478             11.220873   123            0.01                64                   64                1309.933594                             483.362305 embeddings/yelp_graphsage_seed_123_fraction_0.01.pt
+
+Saved results to results/run_seed_123_fraction_0.01.csv

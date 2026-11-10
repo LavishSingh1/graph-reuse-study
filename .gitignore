@@ -1,0 +1,21 @@
+# environments / caches
+.venv/
+.venv-pyg/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# datasets (re-downloaded; do not redistribute)
+data/
+# regenerated artifacts (up to ~1 GB each) and checkpoints
+embeddings/
+*.pt
+*.pth
+*.ckpt
+# runtime junk
+*.pid
+*.zip
+.DS_Store
+# keep the small evidence files
+!results/**
+!logs/**
+!figures/**
